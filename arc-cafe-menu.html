@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#14251f">
+<meta name="description" content="ARC Cafe — Brew &amp; Drive. Food and barista menu.">
+<title>ARC Cafe — Menu</title>
+<style>
+
+:root{--green:#172b24;--green2:#263d32;--cream:#f5f0e5;--paper:#fffdf7;--red:#c64a37;--gold:#d4b878;--ink:#1d2823;--muted:#69736b;--line:#e5dfd2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+.topbar{background:var(--green);color:var(--cream);padding:13px 6vw;display:flex;justify-content:space-between;align-items:center;gap:18px;font-size:12px;letter-spacing:2px;text-transform:uppercase}.topbar b{color:var(--gold)}
+.hero{min-height:470px;background:linear-gradient(110deg,rgba(15,32,25,.97),rgba(15,32,25,.78)),repeating-linear-gradient(135deg,#263b30 0,#263b30 2px,#1a2e25 2px,#1a2e25 8px);color:var(--cream);padding:72px 7vw 60px;position:relative;overflow:hidden}
+.hero:after{content:"ARC";position:absolute;right:-25px;bottom:-70px;font-size:clamp(150px,30vw,360px);font-weight:900;letter-spacing:-18px;color:rgba(255,255,255,.035);pointer-events:none}
+.hero-inner{max-width:1120px;margin:auto;position:relative;z-index:1}.eyebrow{color:var(--gold);font-size:12px;font-weight:bold;letter-spacing:4px;text-transform:uppercase}.hero h1{font-size:clamp(48px,9vw,100px);line-height:.92;letter-spacing:-4px;margin:20px 0 8px;font-weight:900}.hero h1 span{color:var(--gold)}.tagline{font-size:clamp(17px,2vw,22px);letter-spacing:5px;text-transform:uppercase;margin:18px 0 20px}.hero p{max-width:540px;color:#d9ded6;line-height:1.7;font-size:15px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:14px 20px;font-weight:bold;text-transform:uppercase;letter-spacing:1px;font-size:12px;border:1px solid var(--gold);transition:.2s}.btn.primary{background:var(--gold);color:var(--green)}.btn:hover{transform:translateY(-2px)}
+.checker{height:12px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,#f4ead9 14px 28px)}
+main{max-width:1120px;margin:auto;padding:55px 22px 80px}.intro{text-align:center;max-width:700px;margin:0 auto 35px}.intro .eyebrow{color:var(--red)}.intro h2{font-family:Georgia,serif;font-size:clamp(30px,5vw,46px);font-weight:normal;margin:12px 0}.intro p{color:var(--muted);line-height:1.7}
+.controls{position:sticky;top:0;z-index:5;background:rgba(245,240,229,.96);backdrop-filter:blur(10px);padding:14px 0 16px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.search-row{display:flex;gap:10px;max-width:650px;margin:0 auto 14px}.search-row input{width:100%;padding:13px 15px;border:1px solid #d7d0c2;background:var(--paper);font-size:15px;outline-color:var(--green)}
+.tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.tab{border:1px solid #d7d0c2;background:transparent;padding:9px 13px;cursor:pointer;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:bold;color:var(--green)}.tab.active,.tab:hover{background:var(--green);color:var(--cream);border-color:var(--green)}
+.section{margin:44px 0;scroll-margin-top:145px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;border-bottom:2px solid var(--green);padding-bottom:13px;margin-bottom:20px}.section-num{font-size:11px;color:var(--red);letter-spacing:2px;font-weight:bold}.section h2{font-family:Georgia,serif;font-size:clamp(27px,4vw,36px);font-weight:normal;margin:6px 0 0}.section-head p{max-width:430px;margin:0;color:var(--muted);font-size:13px;line-height:1.5;text-align:right}
+.subhead{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--red);font-weight:bold;margin:28px 0 12px}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.item{padding:17px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:18px}.item-main{min-width:0}.item h3{font-size:15px;margin:0 0 6px;line-height:1.3}.item p{font-size:12px;line-height:1.55;color:var(--muted);margin:0}.price{font-size:13px;font-weight:bold;white-space:nowrap;color:var(--green);text-align:right}.price small{display:block;color:var(--muted);font-size:10px;font-weight:normal;margin-top:4px}.sizes{display:flex;gap:12px;justify-content:flex-end}.sizeprice{display:block;text-align:right}.sizeprice em{display:block;font-style:normal;font-size:10px;color:var(--muted);font-weight:normal;margin-bottom:5px}
+.note{background:var(--green);color:var(--cream);padding:25px 28px;margin-top:38px;display:flex;justify-content:space-between;align-items:center;gap:20px}.note strong{color:var(--gold);display:block;letter-spacing:1px;text-transform:uppercase;font-size:12px;margin-bottom:7px}.note p{font-size:13px;line-height:1.6;margin:0;color:#d9ded6}.note-mark{font-size:42px;font-weight:900;color:var(--gold)}
+footer{background:#101d18;color:#d9ded6;padding:34px 7vw;text-align:center}.footer-brand{font-weight:900;font-size:24px;letter-spacing:2px;color:var(--cream)}footer p{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#aab5ac}
+.hidden{display:none!important}.empty{text-align:center;padding:45px;color:var(--muted);display:none}
+@media(max-width:700px){.topbar{padding:12px 18px;font-size:10px;letter-spacing:1px}.hero{padding:58px 24px 50px;min-height:420px}.hero h1{letter-spacing:-2px}.tagline{letter-spacing:3px}.menu-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{text-align:left;margin-top:10px}.controls{position:static}.note{align-items:flex-start}.note-mark{font-size:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.switch{position:sticky;top:0;z-index:10;background:var(--green);display:flex;justify-content:center;gap:10px;padding:10px 16px;border-bottom:3px solid var(--gold)}
+.switch button{flex:1;max-width:260px;padding:14px 18px;font:bold 13px Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--cream);border:1px solid var(--gold);transition:.2s}
+.switch button.active,.switch button:hover{background:var(--gold);color:var(--green)}
+.controls{top:62px}.section{scroll-margin-top:215px}
+.view[hidden]{display:none}
+@media(max-width:700px){.switch{padding:8px 12px}.switch button{padding:12px 8px;font-size:12px;letter-spacing:1px}.controls{top:auto}}
+</style>
+</head>
+<body>
+<div class="topbar"><span><b>ARC CAFE</b> &nbsp; / &nbsp; Brew &amp; Drive</span><span>Fuel your pit stop</span></div>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Coffee • Comfort food • Racing culture</div>
+    <h1>ARC <span>CAFE</span></h1>
+    <div class="tagline">Brew &amp; Drive</div>
+    <p>Italian-inspired favourites, handcrafted for every craving. Pull in, take a break, and find your next favourite bite.</p>
+    <div class="hero-actions"><a class="btn primary" href="#menu">Explore the menu ↓</a><a class="btn" href="#menu" data-goto="barista">Barista menu ☕</a></div>
+  </div>
+</header>
+<div class="checker"></div>
+<div class="checker"></div>
+<div class="switch" role="tablist" aria-label="Choose menu">
+  <button type="button" role="tab" class="active" data-view="food" aria-selected="true">🍕 Food</button>
+  <button type="button" role="tab" data-view="barista" aria-selected="false">☕ Barista</button>
+</div>
+<main id="menu">
+<div class="view" id="view-food">
+  <div class="intro"><div class="eyebrow">The pit-stop menu</div><h2>Good food. Great drives.</h2><p>From slow-fermented sourdough pizza to loaded fries and toasted sandwiches, there’s something for every pit crew.</p></div>
+  <div class="controls">
+    <div class="search-row"><input type="search" class="search" placeholder="Search dishes or ingredients…" aria-label="Search menu"></div>
+    <div class="tabs">
+      <button class="tab active" data-filter="all">Full menu</button><button class="tab" data-filter="pizza">Pizza</button><button class="tab" data-filter="pasta">Pasta</button><button class="tab" data-filter="starters">Starters</button><button class="tab" data-filter="burgers">Burgers</button><button class="tab" data-filter="bread">Artisan breads</button><button class="tab" data-filter="sandwiches">Sandwiches</button>
+    </div>
+  </div>
+  <div class="menuSections">
+    <section class="section" data-category="pizza">
+      <div class="section-head"><div><div class="section-num">01 — Sourdough pizza</div><h2>Pizza, made for the grid</h2></div><p>Slow-fermented sourdough, handcrafted with premium toppings.</p></div>
+      <div class="subhead">Vegetarian</div><div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Bella Margherita</h3><p>San Marzano-style tomato sauce, mozzarella and fresh basil.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹299</span><span class="sizeprice"><em>12 inch</em>₹449</span></div></article>
+        <article class="item"><div class="item-main"><h3>Orto Fresco</h3><p>Seasonal vegetables, bell peppers, mushrooms, olives and mozzarella.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹339</span><span class="sizeprice"><em>12 inch</em>₹499</span></div></article>
+        <article class="item"><div class="item-main"><h3>Verdure Royale</h3><p>A colourful medley of garden vegetables, tomato sauce and melted cheese.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹359</span><span class="sizeprice"><em>12 inch</em>₹529</span></div></article>
+        <article class="item"><div class="item-main"><h3>Fuoco Paneer</h3><p>Spiced paneer, peri-peri seasoning, mozzarella and a smoky finish.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹369</span><span class="sizeprice"><em>12 inch</em>₹549</span></div></article>
+        <article class="item"><div class="item-main"><h3>Paneer Formaggio</h3><p>Golden paneer cubes, rich tomato sauce and a generous layer of cheese.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹379</span><span class="sizeprice"><em>12 inch</em>₹569</span></div></article>
+        <article class="item"><div class="item-main"><h3>Bosco di Funghi</h3><p>Sautéed mushrooms, mozzarella, herbs and a hint of garlic.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹349</span><span class="sizeprice"><em>12 inch</em>₹519</span></div></article>
+        <article class="item"><div class="item-main"><h3>Olive Riviera</h3><p>Black and green olives, mozzarella and Mediterranean herbs.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹299</span><span class="sizeprice"><em>12 inch</em>₹449</span></div></article>
+        <article class="item"><div class="item-main"><h3>Quattro Formaggi</h3><p>A rich blend of four cheeses with a creamy, indulgent finish.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹329</span><span class="sizeprice"><em>12 inch</em>₹499</span></div></article>
+        <article class="item"><div class="item-main"><h3>Verde Pesto Paneer</h3><p>Basil pesto, paneer, mozzarella and aromatic Italian herbs.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹369</span><span class="sizeprice"><em>12 inch</em>₹549</span></div></article>
+      </div>
+      <div class="subhead">Non-vegetarian</div><div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Pollo alla Griglia</h3><p>Grilled chicken, mozzarella, tomato sauce and Italian herbs.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹319</span><span class="sizeprice"><em>12 inch</em>₹479</span></div></article>
+        <article class="item"><div class="item-main"><h3>Diavola Pollo</h3><p>Spicy peri-peri chicken, mozzarella and a fiery house sauce.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹379</span><span class="sizeprice"><em>12 inch</em>₹569</span></div></article>
+        <article class="item"><div class="item-main"><h3>Pepperoni Classico</h3><p>Chicken pepperoni, mozzarella and rich tomato sauce.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹379</span><span class="sizeprice"><em>12 inch</em>₹569</span></div></article>
+        <article class="item"><div class="item-main"><h3>Pesto Pollo</h3><p>Grilled chicken, basil pesto, mozzarella and herbs.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹389</span><span class="sizeprice"><em>12 inch</em>₹579</span></div></article>
+        <article class="item"><div class="item-main"><h3>Salame di Pollo</h3><p>Chicken salami, mozzarella and classic Italian tomato sauce.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹329</span><span class="sizeprice"><em>12 inch</em>₹499</span></div></article>
+        <article class="item"><div class="item-main"><h3>Pollo Supremo</h3><p>Loaded chicken, mozzarella and a generous selection of savoury toppings.</p></div><div class="price sizes"><span class="sizeprice"><em>8 inch</em>₹399</span><span class="sizeprice"><em>12 inch</em>₹599</span></div></article>
+      </div>
+      <div class="note"><div><strong>Signature add-on — Burrata</strong><p>Add creamy burrata to your favourite pizza for a luxurious finish.</p></div><div class="note-mark">+ ARC</div></div>
+    </section>
+    <section class="section" data-category="pasta">
+      <div class="section-head"><div><div class="section-num">02 — Pasta sauces &amp; filled pasta</div><h2>Pick your pasta lane</h2></div><p>Choose your favourite Italian-inspired sauce. Non-vegetarian options include chicken (+₹30).</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Crema Bianca</h3><p>Silky white cream sauce.</p></div><div class="price">₹329 <small>Veg · ₹359 non-veg</small></div></article>
+        <article class="item"><div class="item-main"><h3>Bosco Cremoso</h3><p>Creamy mushroom sauce with garlic and herbs.</p></div><div class="price">₹329 <small>Veg · ₹359 non-veg</small></div></article>
+        <article class="item"><div class="item-main"><h3>Pesto Genovese</h3><p>Fragrant basil pesto with a rich, nutty finish.</p></div><div class="price">₹369 <small>Veg · ₹399 non-veg</small></div></article>
+        <article class="item"><div class="item-main"><h3>Pomodoro Rosso</h3><p>Classic tomato sauce with Italian herbs.</p></div><div class="price">₹339 <small>Veg · ₹369 non-veg</small></div></article>
+        <article class="item"><div class="item-main"><h3>Salsa Rosa</h3><p>A delicate blend of tomato and cream.</p></div><div class="price">₹349 <small>Veg · ₹379 non-veg</small></div></article>
+        <article class="item"><div class="item-main"><h3>Aglio e Olio</h3><p>Garlic, olive oil, chilli and aromatic herbs.</p></div><div class="price">₹299 <small>Veg · ₹329 non-veg</small></div></article>
+        <article class="item"><div class="item-main"><h3>Tortellini della Casa</h3><p>Italian-style stuffed pasta served with your choice of sauce.</p></div><div class="price">₹349 <small>Veg · ₹379 non-veg</small></div></article>
+        <article class="item"><div class="item-main"><h3>Mare e Monti</h3><p>Prawns and fish tossed with your choice of Italian sauce.</p></div><div class="price">₹449 <small>Veg — · ₹479 non-veg</small></div></article>
+      </div>
+    </section>
+    <section class="section" data-category="starters">
+      <div class="section-head"><div><div class="section-num">03 — Starters</div><h2>Small bites, big energy</h2></div><p>Little plates, golden bites and irresistible crunch.</p></div>
+      <div class="subhead">Vegetarian bites</div><div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Golden Garden Nuggets</h3><p>Crispy vegetable nuggets with a golden coating.</p></div><div class="price">₹200</div></article>
+        <article class="item"><div class="item-main"><h3>Patatine Classiche</h3><p>Classic salted fries, crisp outside and fluffy inside.</p></div><div class="price">₹160</div></article>
+        <article class="item"><div class="item-main"><h3>Fuoco Fries</h3><p>Golden fries tossed in bold peri-peri seasoning.</p></div><div class="price">₹180</div></article>
+        <article class="item"><div class="item-main"><h3>Loaded Fries</h3><p>Crispy fries topped with melted cheese and signature sauces.</p></div><div class="price">₹220</div></article>
+        <article class="item"><div class="item-main"><h3>Fiesta di Nachos</h3><p>Crunchy nachos with cheese, vegetables and a flavourful topping.</p></div><div class="price">₹240</div></article>
+        <article class="item"><div class="item-main"><h3>Jalapeño Fondue Bites</h3><p>Crispy cheese balls with a creamy, spicy jalapeño centre.</p></div><div class="price">₹220</div></article>
+        <article class="item"><div class="item-main"><h3>Golden Corn Croquettes</h3><p>Golden bites filled with sweet corn, cheese and seasoning.</p></div><div class="price">₹220</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="burgers">
+      <div class="section-head"><div><div class="section-num">04 — Burgers</div><h2>Stacked for the pit crew</h2></div><p>Handheld favourites, stacked with flavour.</p></div>
+      <div class="subhead">Vegetarian</div><div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Garden Veggie Burger</h3><p>Crispy vegetable patty, lettuce, tomato, cheese and house sauce.</p></div><div class="price">₹199</div></article>
+        <article class="item"><div class="item-main"><h3>Paneer Pesto Burger</h3><p>Grilled paneer, basil pesto, cheese and creamy mayo.</p></div><div class="price">₹249</div></article>
+      </div>
+      <div class="subhead">Chicken</div><div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Grilled Chicken Burger</h3><p>Grilled chicken, lettuce, cheese and signature dressing.</p></div><div class="price">₹279</div></article>
+        <article class="item"><div class="item-main"><h3>Peri-Peri Chicken Burger</h3><p>Spicy chicken patty, peri-peri mayo and melted cheese.</p></div><div class="price">₹299</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="bread">
+      <div class="section-head"><div><div class="section-num">05 — Artisan breads</div><h2>Toasted, golden, shareable</h2></div><p>Freshly toasted, buttery and made for sharing.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Pane all’Aglio</h3><p>Toasted garlic bread with aromatic garlic butter.</p></div><div class="price">₹140</div></article>
+        <article class="item"><div class="item-main"><h3>Formaggio Garlic Bread</h3><p>Golden garlic bread topped with melted cheese.</p></div><div class="price">₹180</div></article>
+        <article class="item"><div class="item-main"><h3>Herb &amp; Cheese Toast</h3><p>Toasted bread with Italian herbs, butter and cheese.</p></div><div class="price">₹180</div></article>
+        <article class="item"><div class="item-main"><h3>Chilli Cheese Toast</h3><p>Cheesy toast with a gentle kick of chilli.</p></div><div class="price">₹200</div></article>
+        <article class="item"><div class="item-main"><h3>Loaded Garlic Bread</h3><p>Garlic bread layered with cheese and savoury toppings.</p></div><div class="price">₹220</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="sandwiches">
+      <div class="section-head"><div><div class="section-num">06 — Gourmet sandwiches</div><h2>Built between the bread</h2></div><p>Toasted to perfection, layered with fresh fillings.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Caprese Melt</h3><p>Mozzarella, tomato, basil and pesto in toasted bread.</p></div><div class="price">₹220</div></article>
+        <article class="item"><div class="item-main"><h3>Garden Club</h3><p>Fresh vegetables, cheese, lettuce and a creamy house spread.</p></div><div class="price">₹220</div></article>
+        <article class="item"><div class="item-main"><h3>Pesto Paneer Melt</h3><p>Seasoned paneer, basil pesto, cheese and toasted bread.</p></div><div class="price">₹240</div></article>
+        <article class="item"><div class="item-main"><h3>Grilled Chicken Club</h3><p>Grilled chicken, lettuce, cheese and signature dressing.</p></div><div class="price">₹260</div></article>
+        <article class="item"><div class="item-main"><h3>Peri-Peri Chicken Melt</h3><p>Spiced chicken, melted cheese and peri-peri mayo.</p></div><div class="price">₹280</div></article>
+        <article class="item"><div class="item-main"><h3>Chicken &amp; Cheese Deluxe</h3><p>Tender chicken, cheese and a creamy savoury spread.</p></div><div class="price">₹280</div></article>
+      </div>
+    </section>
+  </div>
+  <div class="empty">No items found. Try another search.</div>
+  <div class="note"><div><strong>Before you order</strong><p>Please inform our team about any food allergies before ordering.<br>Pizza prices are shown for 8-inch and 12-inch sizes. Suggested 12-inch pizza prices and burger prices are estimates for menu planning.</p></div><div class="note-mark">ARC</div></div>
+</div>
+<div class="view" id="view-barista" hidden>
+  <div class="intro"><div class="eyebrow">The barista bar</div><h2>Great coffee. Great drives.</h2><p>From a classic espresso to a Nutella frappe and a coconut cloud matcha, there’s a cup for every pit crew.</p></div>
+  <div class="controls">
+    <div class="search-row"><input type="search" class="search" placeholder="Search drinks…" aria-label="Search menu"></div>
+    <div class="tabs">
+      <button class="tab active" data-filter="all">Full menu</button><button class="tab" data-filter="hot">Hot coffee</button><button class="tab" data-filter="iced">Iced coffee</button><button class="tab" data-filter="frappes">Frappes</button><button class="tab" data-filter="shakes">Shakes</button><button class="tab" data-filter="tea">Iced tea</button><button class="tab" data-filter="mocktails">Mocktails &amp; soda</button><button class="tab" data-filter="smoothies">Smoothies</button><button class="tab" data-filter="matcha">Matcha</button>
+    </div>
+  </div>
+  <div class="menuSections">
+    <section class="section" data-category="hot">
+      <div class="section-head"><div><div class="section-num">01 — Hot coffee</div><h2>Slow mornings, strong pours</h2></div><p>Classic espresso-based favourites, pulled hot and handcrafted.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Espresso</h3></div><div class="price">₹129</div></article>
+        <article class="item"><div class="item-main"><h3>Doppio</h3></div><div class="price">₹199</div></article>
+        <article class="item"><div class="item-main"><h3>Americano</h3></div><div class="price">₹149</div></article>
+        <article class="item"><div class="item-main"><h3>Affogato</h3></div><div class="price">₹159</div></article>
+        <article class="item"><div class="item-main"><h3>Cortado</h3></div><div class="price">₹149</div></article>
+        <article class="item"><div class="item-main"><h3>Cappuccino</h3></div><div class="price">₹189</div></article>
+        <article class="item"><div class="item-main"><h3>Cafe Latte</h3></div><div class="price">₹189</div></article>
+        <article class="item"><div class="item-main"><h3>Dark Chocolate Mocha</h3></div><div class="price">₹299</div></article>
+        <article class="item"><div class="item-main"><h3>White Chocolate Mocha</h3></div><div class="price">₹299</div></article>
+        <article class="item"><div class="item-main"><h3>Chocolate Affogato</h3></div><div class="price">₹199</div></article>
+        <article class="item"><div class="item-main"><h3>Hot Matcha Latte</h3></div><div class="price">₹239</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="iced">
+      <div class="section-head"><div><div class="section-num">02 — Iced coffee</div><h2>Cold brewed, fast poured</h2></div><p>Chilled coffee favourites, built for a warm pit stop.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Iced Americano</h3></div><div class="price">₹219</div></article>
+        <article class="item"><div class="item-main"><h3>Iced Mocha</h3></div><div class="price">₹249</div></article>
+        <article class="item"><div class="item-main"><h3>Iced Latte</h3></div><div class="price">₹179</div></article>
+        <article class="item"><div class="item-main"><h3>Vietnamese Cold Coffee</h3></div><div class="price">₹249</div></article>
+        <article class="item"><div class="item-main"><h3>Espresso Tonic</h3></div><div class="price">₹219</div></article>
+        <article class="item"><div class="item-main"><h3>Tiramisu Iced Latte</h3></div><div class="price">₹249</div></article>
+        <article class="item"><div class="item-main"><h3>Nutella Iced Latte</h3></div><div class="price">₹249</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="frappes">
+      <div class="section-head"><div><div class="section-num">03 — Frappes</div><h2>Blended, thick and indulgent</h2></div><p>Ice-blended and made for the sweet tooth.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Classic Frappe</h3></div><div class="price">₹299</div></article>
+        <article class="item"><div class="item-main"><h3>Nutella Frappe</h3></div><div class="price">₹339</div></article>
+        <article class="item"><div class="item-main"><h3>Mocha Frappe</h3></div><div class="price">₹299</div></article>
+        <article class="item"><div class="item-main"><h3>Hazelnut Frappe</h3></div><div class="price">₹299</div></article>
+        <article class="item"><div class="item-main"><h3>Oreo Frappe</h3></div><div class="price">₹299</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="shakes">
+      <div class="section-head"><div><div class="section-num">04 — Shakes</div><h2>Creamy, cold, chocolatey</h2></div><p>Thick, creamy shakes for every craving.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Nutella Shake</h3></div><div class="price">₹259</div></article>
+        <article class="item"><div class="item-main"><h3>Berry Shake</h3></div><div class="price">₹319</div></article>
+        <article class="item"><div class="item-main"><h3>Oreo Shake</h3></div><div class="price">₹299</div></article>
+        <article class="item"><div class="item-main"><h3>Chocolate Shake</h3></div><div class="price">₹229</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="tea">
+      <div class="section-head"><div><div class="section-num">05 — Iced tea</div><h2>Crisp and refreshing</h2></div><p>Cool, fruity tea to keep you going.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Lemon Iced Tea</h3></div><div class="price">₹149</div></article>
+        <article class="item"><div class="item-main"><h3>Peach Iced Tea</h3></div><div class="price">₹179</div></article>
+        <article class="item"><div class="item-main"><h3>Cranberry Iced Tea</h3></div><div class="price">₹159</div></article>
+        <article class="item"><div class="item-main"><h3>Orange Iced Tea</h3></div><div class="price">₹159</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="mocktails">
+      <div class="section-head"><div><div class="section-num">06 — Mocktails &amp; soda</div><h2>Fizz for the finish line</h2></div><p>Bright, bubbly and served ice cold.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Cucumber Mint Fizz</h3></div><div class="price">₹159</div></article>
+        <article class="item"><div class="item-main"><h3>Watermelon Basil Fizz</h3></div><div class="price">₹139</div></article>
+        <article class="item"><div class="item-main"><h3>Mint Mojito</h3></div><div class="price">₹139</div></article>
+        <article class="item"><div class="item-main"><h3>Orange Mojito</h3></div><div class="price">₹179</div></article>
+        <article class="item"><div class="item-main"><h3>Fresh Lime Soda</h3></div><div class="price">₹119</div></article>
+        <article class="item"><div class="item-main"><h3>Cranberry Mojito</h3></div><div class="price">₹189</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="smoothies">
+      <div class="section-head"><div><div class="section-num">07 — Smoothies</div><h2>Blended fruit, full throttle</h2></div><p>Fruity, fresh and blended smooth.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Berry Blast Smoothie</h3></div><div class="price">₹239</div></article>
+        <article class="item"><div class="item-main"><h3>Mango Coconut Smoothie</h3></div><div class="price">₹199</div></article>
+        <article class="item"><div class="item-main"><h3>Peanut Butter Banana Smoothie</h3></div><div class="price">₹129</div></article>
+      </div>
+    </section>
+    <section class="section" data-category="matcha">
+      <div class="section-head"><div><div class="section-num">08 — Matcha</div><h2>Green, smooth, signature</h2></div><p>Matcha creations with a fruity twist.</p></div>
+      <div class="menu-grid">
+        <article class="item"><div class="item-main"><h3>Mix Berry Matcha</h3></div><div class="price">₹259</div></article>
+        <article class="item"><div class="item-main"><h3>Mango Matcha</h3></div><div class="price">₹339</div></article>
+        <article class="item"><div class="item-main"><h3>Coconut Cloud Matcha</h3></div><div class="price">₹279</div></article>
+      </div>
+    </section>
+  </div>
+  <div class="empty">No items found. Try another search.</div>
+  <div class="note"><div><strong>Before you order</strong><p>Please inform our team about any food allergies before ordering.<br>All prices are in Indian Rupees (₹).</p></div><div class="note-mark">ARC</div></div>
+</div>
+</main>
+<footer><div class="footer-brand">ARC CAFE</div><p>Brew &amp; Drive · Good food, great drives</p><p>Italian-inspired favourites, handcrafted for every craving.</p></footer>
+<script>
+document.querySelectorAll('.view').forEach(view=>{
+ const search=view.querySelector('.search');
+ const sections=[...view.querySelectorAll('.section')];
+ const tabs=[...view.querySelectorAll('.tab')];
+ const empty=view.querySelector('.empty');
+ let current='all';
+ function update(){
+  const q=search.value.trim().toLowerCase();let total=0;
+  sections.forEach(section=>{
+   const cat=section.dataset.category;let n=0;
+   section.querySelectorAll('.item').forEach(item=>{
+    const match=!q||item.textContent.toLowerCase().includes(q);
+    item.classList.toggle('hidden',!match);if(match)n++;
+   });
+   const show=(current==='all'||current===cat)&&n>0;
+   section.classList.toggle('hidden',!show);if(show)total+=n;
+  });
+  empty.style.display=total?'none':'block';
+ }
+ tabs.forEach(tab=>tab.addEventListener('click',()=>{current=tab.dataset.filter;tabs.forEach(t=>t.classList.toggle('active',t===tab));update()}));
+ search.addEventListener('input',update);
+});
+const switchBtns=[...document.querySelectorAll('.switch button')];
+function showView(name){
+ document.querySelectorAll('.view').forEach(v=>v.hidden=v.id!=='view-'+name);
+ switchBtns.forEach(b=>{const on=b.dataset.view===name;b.classList.toggle('active',on);b.setAttribute('aria-selected',on)});
+}
+switchBtns.forEach(b=>b.addEventListener('click',()=>{
+ showView(b.dataset.view);
+ document.querySelector('.switch').scrollIntoView({block:'start'});
+}));
+document.querySelectorAll('[data-goto]').forEach(a=>a.addEventListener('click',()=>showView(a.dataset.goto)));
+if(location.hash==='#barista')showView('barista');
+</script>
+</body>
+</html>
